@@ -2,6 +2,7 @@
 Trent Blair
 10/6/21
 The purpose of this project is to test my nodeProject
+Collaborators Kevin, Ishan
  */
 
 public class nodeProjectTester {
@@ -21,7 +22,7 @@ public class nodeProjectTester {
         testA.setSecondNode(testC);//tests the get second node
         System.out.println(testA.equals(testB));
         testA.setValue("Node is Epic");
-        System.out.println(testA.equals(testC));
+        System.out.println(testA.equals(testC));//tests the .equals
 
     }
 }

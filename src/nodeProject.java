@@ -2,16 +2,17 @@
 Trent Blair
 10/6/21
 The purpose of this project is to set up the node Project and use type T syntax
+Collaborators Kevin, Ishan
  */
 
-public class nodeProject <T>{
+public class nodeProject <T>{//using type T syntax
 
     private nodeProject nodeOne;
     private nodeProject nodeTwo;
 
     private T value;
 
-    public nodeProject(){
+    public nodeProject(){//default constructor
         nodeOne = null;
         nodeTwo = null;
     }
@@ -22,7 +23,7 @@ public class nodeProject <T>{
         this.value = value;
     }
 
-    public nodeProject(T value, nodeProject node1, nodeProject node2){
+    public nodeProject(T value, nodeProject node1, nodeProject node2){//constructor with value node1 and node2
         this.nodeOne = node1.nodeOne;
         this.nodeTwo = node2.nodeTwo;
         this.value = value;
@@ -35,12 +36,12 @@ public class nodeProject <T>{
         this.value = value;
     }
 
-    public void setFirstNode(nodeProject nodeOne){
+    public void setFirstNode(nodeProject nodeOne){// sets the first node
         this.nodeOne = nodeOne;
         makeChild(nodeOne);
     }
 
-    public void setSecondNode(nodeProject nodeTwo) {
+    public void setSecondNode(nodeProject nodeTwo) {// sets the second node
         this.nodeTwo = nodeTwo;
         makeParent(nodeTwo);
     }
@@ -59,11 +60,11 @@ public class nodeProject <T>{
         return value;
     }
 
-    public nodeProject getFirstNode(){
+    public nodeProject getFirstNode(){//gets the first node
         return nodeOne;
     }
 
-    public nodeProject getSecondNode(){
+    public nodeProject getSecondNode(){//gets the second node
         return nodeTwo;
     }
 
@@ -78,8 +79,5 @@ public class nodeProject <T>{
         } else if (this.value == null || node.value == null){
             return false;
         } else return this.value == node.value;
-
     }
-
-
 }
